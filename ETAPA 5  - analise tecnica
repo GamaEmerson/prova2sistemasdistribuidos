@@ -1,0 +1,22 @@
+1 Qual o papel do semáforo? 
+
+Semáforo: limita a quantidade de threads que executam uma operação simultaneamente (neste caso,
+duas)
+
+2 Por que é necessario sincronizar os dados entre o servidor principal e a replica 
+
+Sincronização: sem copiar o novo valor, a réplica continua com 10, enquanto o principal possui 7,
+provocando leitura desatualizada.
+
+3 O que significa tolerancia a falhas e como ela aparece neste programa? 
+
+ é a mudança do atendimento para um nó alternativo após a indisponibilidade do principal.
+
+4 Para que serve o lock no programa e como o controle de acesso aos recusrsos ajuda a prevenir problemas de concorrencia
+
+ Lock protege a atualização conjunta do estoque e da lista de pedidos para evitar que threads alterem
+esses dados de modo concorrente e inconsistente.
+
+5 considerando a sequencia de eventos a sincronizaçao do estoque deve acontecer antes ou depois do processamento dos pedidos
+
+depois do processamento
